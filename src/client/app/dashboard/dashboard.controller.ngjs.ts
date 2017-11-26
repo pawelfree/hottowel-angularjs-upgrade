@@ -27,14 +27,14 @@
     }
 
     function getMessageCount() {
-      return dataservice.getMessageCount().then(function(data) {
+      return dataservice.getMessageCount().subscribe(function(data) {
         vm.messageCount = data;
         return vm.messageCount;
       });
     }
 
     function getPeople() {
-      return dataservice.getPeople().then(function(data) {
+      return dataservice.getPeople().subscribe(function(data) {
         vm.people = data;
         return vm.people;
       });
