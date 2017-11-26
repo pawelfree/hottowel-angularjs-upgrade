@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
 <head>
   <style>
     /* This helps the ng-show/ng-hide animations start at the right place. */
     /* Since Angular has this but needs to load, this gives us the class early. */
-    
+
     .ng-hide {
       display: none!important;
     }
@@ -31,6 +31,14 @@
   <link rel="stylesheet" href="/.tmp/styles.css">
   <!-- endinject -->
   <!-- endbuild -->
+
+  <script src="/node_modules/core-js/client/shim.min.js"></script>
+  <script src="/node_modules/zone.js/dist/zone.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+  <script src="/systemjs.config.js"></script>
+  <script>
+    System.import('/src/client/main.js');
+  </script>
 </head>
 
 <body>
@@ -65,33 +73,33 @@
 
   <!-- build:js js/app.js -->
   <!-- inject:js -->
-  <script src="/src/client/app/app.module.js"></script>
-  <script src="/src/client/app/admin/admin.module.js"></script>
-  <script src="/src/client/app/blocks/exception/exception.module.js"></script>
-  <script src="/src/client/app/blocks/logger/logger.module.js"></script>
-  <script src="/src/client/app/blocks/router/router.module.js"></script>
-  <script src="/src/client/app/core/core.module.js"></script>
-  <script src="/src/client/app/dashboard/dashboard.module.js"></script>
-  <script src="/src/client/app/layout/layout.module.js"></script>
-  <script src="/src/client/app/widgets/widgets.module.js"></script>
-  <script src="/src/client/app/admin/admin.controller.js"></script>
-  <script src="/src/client/app/admin/admin.route.js"></script>
-  <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
-  <script src="/src/client/app/blocks/exception/exception.js"></script>
-  <script src="/src/client/app/blocks/logger/logger.js"></script>
-  <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
-  <script src="/src/client/app/core/config.js"></script>
-  <script src="/src/client/app/core/constants.js"></script>
-  <script src="/src/client/app/core/core.route.js"></script>
-  <script src="/src/client/app/core/dataservice.js"></script>
-  <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
-  <script src="/src/client/app/dashboard/dashboard.route.js"></script>
-  <script src="/src/client/app/layout/ht-sidebar.directive.js"></script>
-  <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
-  <script src="/src/client/app/layout/shell.controller.js"></script>
-  <script src="/src/client/app/layout/sidebar.controller.js"></script>
-  <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
-  <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
+  <script src="/src/client/app/app.module.ngjs.js"></script>
+  <script src="/src/client/app/admin/admin.module.ngjs.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.module.ngjs.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.module.ngjs.js"></script>
+  <script src="/src/client/app/blocks/router/router.module.ngjs.js"></script>
+  <script src="/src/client/app/core/core.module.ngjs.js"></script>
+  <script src="/src/client/app/dashboard/dashboard.module.ngjs.js"></script>
+  <script src="/src/client/app/layout/layout.module.ngjs.js"></script>
+  <script src="/src/client/app/widgets/widgets.module.ngjs.js"></script>
+  <script src="/src/client/app/admin/admin.controller.ngjs.js"></script>
+  <script src="/src/client/app/admin/admin.route.ngjs.js"></script>
+  <script src="/src/client/app/blocks/exception/exception-handler.provider.ngjs.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.ngjs.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.ngjs.js"></script>
+  <script src="/src/client/app/blocks/router/router-helper.provider.ngjs.js"></script>
+  <script src="/src/client/app/core/config.ngjs.js"></script>
+  <script src="/src/client/app/core/constants.ngjs.js"></script>
+  <script src="/src/client/app/core/core.route.ngjs.js"></script>
+  <script src="/src/client/app/core/dataservice.ngjs.js"></script>
+  <script src="/src/client/app/dashboard/dashboard.controller.ngjs.js"></script>
+  <script src="/src/client/app/dashboard/dashboard.route.ngjs.js"></script>
+  <script src="/src/client/app/layout/ht-sidebar.directive.ngjs.js"></script>
+  <script src="/src/client/app/layout/ht-top-nav.directive.ngjs.js"></script>
+  <script src="/src/client/app/layout/shell.controller.ngjs.js"></script>
+  <script src="/src/client/app/layout/sidebar.controller.ngjs.js"></script>
+  <script src="/src/client/app/widgets/ht-img-person.directive.ngjs.js"></script>
+  <script src="/src/client/app/widgets/ht-widget-header.directive.ngjs.js"></script>
   <!-- endinject -->
 
   <!-- inject:templates:js -->

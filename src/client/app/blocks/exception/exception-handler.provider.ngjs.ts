@@ -12,18 +12,17 @@
    * Must configure the exception handling
    */
   function exceptionHandlerProvider() {
-    /* jshint validthis:true */
-    this.config = {
-      appErrorPrefix: undefined
-    };
-
-    this.configure = function(appErrorPrefix) {
-      this.config.appErrorPrefix = appErrorPrefix;
-    };
-
-    this.$get = function() {
-      return { config: this.config };
-    };
+    return {
+      config: {
+        appErrorPrefix: undefined
+      },
+      configure: function(appErrorPrefix) {
+        this.config.appErrorPrefix = appErrorPrefix;
+      },
+      $get: function() {
+        return { config: this.config };
+      }
+    }
   }
 
   config.$inject = ['$provide'];

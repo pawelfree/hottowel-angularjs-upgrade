@@ -36,15 +36,7 @@ gulp.task('default', ['help']);
  * @return {Stream}
  */
 gulp.task('vet', function() {
-  log('Analyzing source with JSHint and JSCS');
-
-  return gulp
-    .src(config.alljs)
-    .pipe($.if(args.verbose, $.print()))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
-    .pipe($.jshint.reporter('fail'))
-    .pipe($.jscs());
+  log('VET: Disabled for upgrade. Use tslint.');
 });
 
 /**
@@ -451,8 +443,8 @@ function getNodeOptions(isDev) {
     script: config.nodeServer,
     delayTime: 1,
     env: {
-      "PORT": port,
-      "NODE_ENV": isDev ? 'dev' : 'build'
+      'PORT': port,
+      'NODE_ENV': isDev ? 'dev' : 'build'
     },
     watch: [config.server]
   };

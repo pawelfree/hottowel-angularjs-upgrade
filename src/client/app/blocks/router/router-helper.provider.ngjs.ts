@@ -9,7 +9,6 @@
   routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
   /* @ngInject */
   function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
-    /* jshint validthis:true */
     var config = {
       docTitle: undefined,
       resolveAlways: {}
@@ -21,11 +20,6 @@
 
     $locationProvider.html5Mode(true);
 
-    this.configure = function(cfg) {
-      angular.extend(config, cfg);
-    };
-
-    this.$get = RouterHelper;
     RouterHelper.$inject = ['$location', '$rootScope', '$state', 'logger'];
     /* @ngInject */
     function RouterHelper($location, $rootScope, $state, logger) {
@@ -101,5 +95,13 @@
         );
       }
     }
+
+    return {
+      configure: function(cfg) {
+        angular.extend(config, cfg);
+      },
+      $get: RouterHelper
+    }
+
   }
 })();

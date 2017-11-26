@@ -34,14 +34,14 @@ module.exports = function() {
     index: client + 'index.html',
     // app js, with no specs
     js: [
-      clientApp + '**/*.module.js',
-      clientApp + '**/*.js',
-      '!' + clientApp + '**/*.spec.js'
+      clientApp + '**/*.module.ngjs.js',
+      clientApp + '**/*.ngjs.js',
+      '!' + clientApp + '**/*.spec.ngjs.js'
     ],
     jsOrder: [
-      '**/app.module.js',
-      '**/*.module.js',
-      '**/*.js'
+      '**/app.module.ngjs.js',
+      '**/*.module.ngjs.js',
+      '**/*.ngjs.js'
     ],
     less: client + 'styles/styles.less',
     report: report,
@@ -65,7 +65,7 @@ module.exports = function() {
     /**
      * plato
      */
-    plato: { js: clientApp + '**/*.js' },
+    plato: { js: clientApp + '**/*.ngjs.js' },
 
     /**
      * browser sync
@@ -115,13 +115,13 @@ module.exports = function() {
       nodeModules + '/sinon/pkg/sinon.js',
       nodeModules + '/sinon-chai/lib/sinon-chai.js'
     ],
-    specHelpers: [client + 'test-helpers/*.js'],
-    specs: [clientApp + '**/*.spec.js'],
-    serverIntegrationSpecs: [client + '/tests/server-integration/**/*.spec.js'],
+    specHelpers: [client + 'test-helpers/*.ngjs.js'],
+    specs: [clientApp + '**/*.spec.ngjs.js'],
+    serverIntegrationSpecs: [client + '/tests/server-integration/**/*.spec.ngjs.js'],
     /**
      * E2E Scenario Files
      */
-    scenarios: client + '/test/e2e/**/*.spec.js',
+    scenarios: client + '/test/e2e/**/*.spec.ngjs.js',
 
     /**
      * Node settings
@@ -156,8 +156,8 @@ module.exports = function() {
       files: [].concat(
         bowerFiles,
         config.specHelpers,
-        clientApp + '**/*.module.js',
-        clientApp + '**/*.js',
+        clientApp + '**/*.module.ngjs.js',
+        clientApp + '**/*.ngjs.js',
         temp + config.templateCache.file,
         config.serverIntegrationSpecs
       ),
@@ -173,7 +173,7 @@ module.exports = function() {
       },
       preprocessors: {}
     };
-    options.preprocessors[clientApp + '**/!(*.spec)+(.js)'] = ['coverage'];
+    options.preprocessors[clientApp + '**/!(*.spec)+(.ngjs.js)'] = ['coverage'];
     return options;
   }
 };

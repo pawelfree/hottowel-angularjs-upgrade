@@ -1,12 +1,16 @@
-(function() {
-  'use strict';
+import { NgModule } from '@angular/core';
+import { UpgradeModule } from '@angular/upgrade/static';
+import { BrowserModule } from '@angular/platform-browser';
 
-  angular.module('app', [
-    'app.core',
-    'app.widgets',
-    'app.admin',
-    'app.dashboard',
-    'app.layout'
-  ]);
-
-})();
+@NgModule({
+  imports: [
+    BrowserModule,
+    UpgradeModule,
+  ],
+})
+export class AppModule {
+  constructor(private upgrade: UpgradeModule) { }
+  ngDoBootstrap() {
+    this.upgrade.bootstrap(document.documentElement, ['app']);
+  }
+}

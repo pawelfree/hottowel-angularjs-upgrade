@@ -9,3 +9,4 @@ report/plato
 
 # Client JS files
 src/client/**/*.js
+src/client/**/*.js.map
