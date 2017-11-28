@@ -18,9 +18,9 @@
   },
   "dependencies": {
     "jquery": "~2.2.2",
-    "angular": "~1.5",
-    "angular-animate": "~1.5.9",
-    "angular-sanitize": "~1.5.9",
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-sanitize": "^1.6.7",
     "bootstrap": "~3.3.6",
     "extras.angular.plus": "~0.9.2",
     "font-awesome": "~4.5.0",
@@ -30,7 +30,7 @@
     "angular-bootstrap": "~1.2.5"
   },
   "resolutions": {
-    "angular": "~1.5.9",
+    "angular": "^1.6.7",
     "sinon": "~1.15.0"
   },
   "overrides": {

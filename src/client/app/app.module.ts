@@ -3,6 +3,8 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
+import { HtSidebarComponent } from './layout/ht-sidebar.component';
+
 import { Dataservice } from './core/dataservice';
 
 @NgModule({
@@ -10,6 +12,12 @@ import { Dataservice } from './core/dataservice';
     BrowserModule,
     HttpModule,
     UpgradeModule
+  ],
+  declarations: [
+    HtSidebarComponent,
+  ],
+  entryComponents: [
+    HtSidebarComponent,
   ],
   providers: [
     // Angular:

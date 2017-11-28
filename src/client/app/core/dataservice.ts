@@ -8,10 +8,6 @@ import 'rxjs/add/observable/of';
 
 // TODO: Remove the following after all consuming entities have been upgraded:
 import { downgradeInjectable } from '@angular/upgrade/static';
-import * as _angular_ from 'angular';
-declare global {
-  const angular: typeof _angular_;
-}
 
 @Injectable()
 export class Dataservice {
